@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='masks',
-    version='0.1.2',
+    version='0.1.3',
     author='Nigel Cleland',
     author_email='nigel.cleland@gmail.com',
     packages=['masks'],
