@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='masks',
-    version='0.1.0',
+    version='0.1.1',
     author='Nigel Cleland',
     author_email='nigel.cleland@gmail.com',
     packages=['masks'],
@@ -10,7 +10,7 @@ setup(
     url='http://pypi.python.org/pypi/masks/',
     license='LICENSE.txt',
     description='Syntactic sugar for data filtering with pandas.',
-    long_description=open('README.md').read(),
+    long_description=open('README.txt').read(),
     install_requires=[
         "pandas >= 0.11.0",
         "numpy >= 1.7.1",
