@@ -10,7 +10,6 @@ setup(
     url='http://pypi.python.org/pypi/masks/',
     license='LICENSE.txt',
     description='Syntactic sugar for data filtering with pandas.',
-    long_description=open('README.rst').read(),
     install_requires=[
         "pandas >= 0.11.0",
         "numpy >= 1.7.1",
