@@ -28,12 +28,14 @@ Best demonstrated via example.
     sample = pd.DataFrame(np.arange(30).reshape(15,2), columns=["A","B"])
     
     # Select a single row which matches the truth values
+    
     sample.eq_mask("A", 16)
     
        A  B
     8 16 17
     
     # This is equivalent to the following
+    
     sample[sample["A"] == 16]
     
     # Where masks becomes in handy is in multiple selection.
@@ -49,9 +51,11 @@ Best demonstrated via example.
     4  8  9
     
     # Which is equivalent to 
+    
     sample[(sample["A"] == 12) | (sample["A"] == 16) | (sample["A"] == 8)]
 
     # Filters may be chained together as needed
+
     sample.ge_mask("A", 8).le_mask("B", 13)
 
        A  B
