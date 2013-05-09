@@ -49,6 +49,30 @@ def mask(self, key, values, how=""):
          "in": self.in_eqmask}
     return d[how](key, values)
     
+def top_mask(self, key, percentile, sort=False):
+    df = self.sort(columns=key)
+    if sort:
+        return df.ge_mask(key, np.percentile(df[key], 100 - percentile)) 
+    else:
+        return self.ge_mask(key, np.percentile(df[key], 100 -percentile))
+        
+def bot_mask(self, key, percentile, sort=False):
+    df = self.sort(columns=key)
+    if sort:
+        return df.le_mask(key, np.percentile(df[key], percentile))
+    else:
+        return self.le_mask(key, np.percentile(df[key], percentile))
+        
+def mid_mask(self, key, percentile, sort=False):
+    df = self.sort(columns=key)
+    p1 = np.percentile(df[key], 50 - percentile / 2.)
+    p2 = np.percentile(df[key], 50 + percentile / 2.)
+    if sort:
+        return df.ge_mask(key, p1).le_mask(key, p2)
+    else:
+        return self.ge_mask(key, p1).le_mask(key, p2)
+    
+    
 def apply_masks():
     
     pd.DataFrame.eq_mask = eq_mask
@@ -63,6 +87,9 @@ def apply_masks():
     pd.DataFrame.mixbool_mask = mixbool_mask
     pd.DataFrame.bet_mask = bet_mask
     pd.DataFrame.mask = mask
+    pd.DataFrame.top_mask = top_mask
+    pd.DataFrame.bot_mask = bot_mask
+    pd.DataFrame.mid_mask = mid_mask
     
     return pd.DataFrame
     
