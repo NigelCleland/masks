@@ -43,7 +43,9 @@ Best demonstrated via example.
 
        A  B
     6 12 13
+    
     8 16 17
+    
     4  8  9
     
     # Which is equivalent to 
@@ -54,7 +56,9 @@ Best demonstrated via example.
 
        A  B
     4  8  9
+    
     5 10 11
+    
     6 12 13
     
 Development
