@@ -5,6 +5,8 @@ masks
 Additions to the Python-Pandas library which provide syntactic sugar for
 selecting data instead of the current (imo) unwieldy syntax.
 
+Current Version: 0.1.3
+
 Installation
 ============
 
@@ -16,6 +18,31 @@ It can be installed in a virtual environment or however you wish.
 
 Features
 ========
+
+Currently masks are installed for the following use cases:
+
+- equal to
+- greater than or equal to
+- greater than
+- less than or equal to
+- less than
+- not equal to
+- in (e.g. multiple equal to)
+- between
+- top (top x%)
+- bot (bottom x%)
+- mid (middle x%)
+- mixed equal (e.g. A = X or B = Y)
+- mixed boolean (e.g. A >= X or B != Y)
+
+Functionality is applied to both DataFrames and Series through the same syntax.
+_mask has been applied to all functions to signify that it is not core pandas
+functionality.
+Should be noted that some series may not have all masks applied, especially multiple
+column masks.
+
+Usage
+=====
 
 Currently, masks acts as syntactic sugar to make the selection of data which
 meets specific features easier.
@@ -65,12 +92,21 @@ Best demonstrated via example.
     
     6 12 13
     
+    
+Documentation
+=============
+
+Documentation is currently quite lacking, I'm oscilating between the fact that
+all of the additional functions are very simple and evidently self documenting.
+This package is mainly sugar around the existing syntax, not new functionality.
+    
+    
 Development
 ===========
 
 masks is currently in semi active development.
 It is mainly intended for my own usage but other people may wish to use it as well.
-Hopefully it is of use to anyone. Feel free to use/modify/distribute as you want.
+Hopefully it is of use to someone. Feel free to use/modify/distribute as you want.
 
 License: MIT
 
