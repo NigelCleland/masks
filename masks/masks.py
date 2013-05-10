@@ -86,7 +86,7 @@ def apply_masks():
     pd.DataFrame.mix_eqmask = mix_eqmask
     pd.DataFrame.mixbool_mask = mixbool_mask
     pd.DataFrame.bet_mask = bet_mask
-    pd.DataFrame.mask = mask
+    #pd.DataFrame.mask = mask
     pd.DataFrame.top_mask = top_mask
     pd.DataFrame.bot_mask = bot_mask
     pd.DataFrame.mid_mask = mid_mask
