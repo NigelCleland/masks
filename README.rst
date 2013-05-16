@@ -2,6 +2,9 @@
 masks
 =====
 
+Note, masks is going to be depreciated in favour of the pdtools library.
+https://github.com/NigelCleland/pdtools
+
 Additions to the Python-Pandas library which provide syntactic sugar for
 selecting data instead of the current (imo) unwieldy syntax.
 
